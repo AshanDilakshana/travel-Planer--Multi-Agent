@@ -1,0 +1,58 @@
+{
+  "requirements": {
+    "traveler": {
+      "adults": 1,
+      "children": 0
+    },
+    "trip": {
+      "type": "round_trip",
+      "origin": {"city": "Colombo", "airport_iata": "CMB"},
+      "destination": {"city": "Bangkok", "airport_iata": "BKK"},
+      "depart_date": "2025-11-10",
+      "return_date": "2025-11-15"
+    },
+    "preferences": {
+      "cabin_class": "economy",
+      "non_stop": false,
+      "max_layovers": 1,
+      "date_flex_days": 0,
+      "interests": ["food", "culture"]
+    },
+    "budget": {
+      "total_currency": "USD",
+      "total_amount": 1200,
+      "flights_amount": 700,
+      "hotels_amount": 500
+    },
+    "hotel_prefs": {
+      "stars": "3-4",
+      "area": "central",
+      "room_type": "double"
+    },
+    "flight_check": {
+      "outbound_query": {
+        "from_iata": "CMB",
+        "to_iata": "BKK",
+        "date": "2025-11-10",
+        "passengers": 1,
+        "cabin": "economy",
+        "non_stop": false},
+      "outbound_result": {
+        "available": true,
+        "top_option": {
+          "carrier": "DemoAir",
+          "flight_number": "DA123",
+          "depart_iso": "2025-11-10T09:10:00+05:30",
+          "arrive_iso": "2025-11-10T14:35:00+07:00",
+          "price_usd": 245.0
+        }
+      },
+      "return_query": null,
+      "return_result": null},
+    "user_confirmations": {
+      "accept_outbound_top_option": true,
+      "notes": "Okay with 1 layover if cheaper"
+    },
+    "missing_info": []
+  }
+}
