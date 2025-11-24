@@ -17,7 +17,7 @@ class FlightSearchInput(BaseModel):
         ..., description="The IATA code for the destination airport (e.g., 'BKK')."
     )
 
-
+#this tool decoretor 
 @tool("search_flight_availability", args_schema=FlightSearchInput)
 def search_flight_availability(origin: str, destination: str) -> dict:
     """
@@ -38,7 +38,6 @@ def search_flight_availability(origin: str, destination: str) -> dict:
 
         if not flights:
             return {"available": False, "options": []}
-
         return {"available": True, "options": flights}
 
     except requests.exceptions.RequestException as e:
